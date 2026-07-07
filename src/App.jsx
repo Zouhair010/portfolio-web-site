@@ -6,7 +6,7 @@ import { Globe, Palette, Film, Award, MapPin, Info, X } from 'lucide-react';
 import img2 from '/public/1.jpeg'; import img1 from '/public/2.jpeg'; import img4 from '/public/3.jpeg';
 import img3 from '/public/4.jpeg'; import img5 from '/public/5.jpeg'; import img6 from '/public/6.jpeg';
 import img7 from '/public/7.jpeg'; import img8 from '/public/8.jpeg'; import img9 from '/public/9.jpeg';
-import img11 from '/public/11.jpeg'; import img14 from '/public/4.jpeg'; import img15 from '/public/15.jpeg';
+import img11 from '/public/11.jpeg'; import img14 from '/public/14.jpeg'; import img15 from '/public/15.jpeg';
 import img0 from '/public/0.jpg'; import img20 from '/public/20.jpg'; 
 import img21 from '/public/21.jpg'; import img22 from '/public/22.jpg'; import img23 from '/public/23.jpg';
 
