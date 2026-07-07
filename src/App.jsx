@@ -42,15 +42,25 @@ export default function App() {
 
   return (
     <div className="bg-[#1a1917] text-gray-200 min-h-screen font-serif" style={{ direction: lang === 'ar' ? 'rtl' : 'ltr' }}>
-      <header className="sticky top-0 z-50 bg-[#1a1917]/95 border-b border-[#d4af37]/30 p-6 flex justify-between items-center shadow-lg">
-        <h1 className="text-3xl font-bold text-[#d4af37] tracking-wider uppercase">{data.title}</h1>
-        <div className="flex gap-1 bg-[#2a2926] p-1 rounded-sm border border-[#d4af37]/20">
-          {['ar', 'en', 'fr', 'es'].map((l) => (
-            <button key={l} onClick={() => setLang(l)} className={`px-4 py-1 text-xs font-semibold transition-all ${lang === l ? 'bg-[#d4af37] text-[#1a1917]' : 'text-[#d4af37]/70 hover:text-white'}`}>
-              {l.toUpperCase()}
-            </button>
+      <header className="sticky top-0 z-50 bg-[#1a1917]/95 border-b border-[#d4af37]/30 p-5 flex justify-between items-center shadow-lg">
+        <a href="#" className="text-3xl font-bold text-[#d4af37] tracking-wider uppercase border border-[#d4af37]/50 px-4 py-2 rounded-sm hover:bg-[#d4af37]/10 transition-colors">{data.title}</a>
+        <nav className="hidden md:flex items-center gap-6">
+          {content.map(sec => (
+            <a key={sec.id} href={`#${sec.id}`} className="text-sm text-[#d4af37]/70 hover:text-white transition-colors font-semibold tracking-wider">
+              {sec.title.split(' ').slice(1).join(' ')}
+            </a>
           ))}
-        </div>
+        </nav>
+        <select
+          value={lang}
+          onChange={(e) => setLang(e.target.value)}
+          className="bg-[#2a2926] border border-[#d4af37]/20 text-[#d4af37] text-xs font-semibold rounded-sm px-4 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#d4af37]"
+        >
+          {['ar', 'en', 'fr', 'es'].map((l) => (
+            <option key={l} value={l} className="bg-[#1a1917] text-[#d4af37]">
+              {l.toUpperCase()}</option>
+          ))}
+        </select>
       </header>
 
       <main className="max-w-4xl mx-auto p-8 space-y-12">
@@ -71,7 +81,8 @@ export default function App() {
 
       <footer className="py-12 text-center border-t border-[#d4af37]/20">
         <div className="flex justify-center gap-6 mb-4">
-          <a href="https://www.facebook.com/mustafa.elkouch.2025/" target="_blank" rel="noopener noreferrer" className="text-[#d4af37] hover:text-white transition-colors"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://www.facebook.com/mustafa.elkouch.2025/" target="_blank" rel="noopener noreferrer" className="text-[#d4af37] hover:text-white transition-colors"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://wa.me/212648470491" target="_blank" rel="noopener noreferrer" className="text-[#d4af37] hover:text-white transition-colors"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
           <a href="https://www.instagram.com/mustapha_elkaouch/" target="_blank" rel="noopener noreferrer" className="text-[#d4af37] hover:text-white transition-colors"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
         </div>
         <p className="text-[#d4af37]/50 font-serif">© 2026 Mustapha Elkouch.</p>
