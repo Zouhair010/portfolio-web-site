@@ -1,8 +1,6 @@
 // استيراد المكتبات اللازمة من رياكت و framer-motion
 import React, { useState } from 'react';
-
 import Data from './components/data';
-
 import Header from './components/header';
 import Main from './components/body';
 import Footer from './components/footer';

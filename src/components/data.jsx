@@ -4,7 +4,7 @@
   import img7 from '/public/7.jpeg'; import img8 from '/public/8.jpeg'; import img9 from '/public/9.jpeg';
   import img11 from '/public/11.jpeg'; import img14 from '/public/14.jpeg'; import img15 from '/public/15.jpeg';
   import img0 from '/public/0.jpg'; import img20 from '/public/20.jpg'; 
-  import img21 from '/public/21.jpg'; import img22 from '/public/22.jpg'; import img23 from '/public/23.jpg'
+  import img21 from '/public/21.jpg'; import img22 from '/public/22.jpg'; import img23 from '/public/23.jpg';
 
 // كائن يحتوي على النصوص متعددة اللغات للموقع
 const data = {
@@ -54,6 +54,7 @@ const data = {
   }
 };
 
+// دالة Data تقوم بإرجاع البيانات المنظمة بناءً على اللغة المختارة
 function Data(lg){
   const content = [
     { id: 'bio', imgs: [img0], ...data[lg].sections.bio },
